@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "89c8afb4-00c1-40ca-8675-8969909bc4c9",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6433305"
+	},
+	"item": [
+		{
+			"name": "fileupload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "img",
+							"type": "file",
+							"src": "/C:/Users/Ankit Sah/Downloads/screencapture-seoptimer-aarneel-com-2022-10-28-10_15_20.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/fileupload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"fileupload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fileRead",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "qrGenrate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/qr/genrate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"qr",
+						"genrate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "qrScan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/qr/scan/cad784cd96f3cfad7039b93d244cde473b4b90360b0fa6ba1fccae6a875a1c7112143f801b1e19a4ee41b39da7a5b0b8cea5eaabcfa204b4c53e0529bcbafd99f8d97909aea5f77f4cc53e9f748e7817",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"qr",
+						"scan",
+						"cad784cd96f3cfad7039b93d244cde473b4b90360b0fa6ba1fccae6a875a1c7112143f801b1e19a4ee41b39da7a5b0b8cea5eaabcfa204b4c53e0529bcbafd99f8d97909aea5f77f4cc53e9f748e7817"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -2,6 +2,7 @@ import express from "express";
 import multer from "multer";
 const route = express.Router();
 
+//set dest path
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "./public/uploads");
@@ -11,6 +12,7 @@ const storage = multer.diskStorage({
   },
 });
 
+//for filter the data
 const Filter = (req, file, cb) => {
   if (file.mimetype === "image/png" || file.mimetype === "image/jpg") {
     cb(null, true);
@@ -33,13 +35,10 @@ route.post("/fileupload", (req, res) => {
       return res.status(400).json({ message: err.message });
     }
     console.log(req.file);
-    return res
-      .status(200)
-      .json({
-        fileName: req.file.originalname,
-        fileUrl:
-          "http://localhost:5000/public/uploads/" + req.file.originalname,
-      });
+    return res.status(200).json({
+      fileName: req.file.originalname,
+      fileUrl: "http://localhost:5000/public/uploads/" + req.file.originalname,
+    });
   });
 });
 
